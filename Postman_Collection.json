@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "54b23612-959a-4b5b-affe-123a0a3f93bc",
+		"name": "Assignment1_24495",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30086367"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/auth/SignUp",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"musab@xyz.com\",\r\n    \"firstName\": \"musab\",\r\n    \"lastName\": \"iqbal\",\r\n    \"admin\":true,\r\n    \"age\": 18,\r\n    \"password\": \"12345678!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/SignUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"SignUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/auth/Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"musab@xyz.com\",\r\n    \"password\": \"12345678!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/Login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/form/CreateForm",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hYXpAeHl6LmNvbSIsImNyZWF0ZWRBdCI6IjIwMjQtMDItMTlUMTE6NTE6NDMuMjI1WiIsImFnZSI6MTgsImFkbWluIjpmYWxzZSwiaWF0IjoxNzA4MzQzNTAzLCJleHAiOjE3MDg0Mjk5MDN9.51joPtzYz41d_IK-ZE5DKDqPgqroyBjnkFWMb5_O7WE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY0B4eXouY29tIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0xOVQwNjo0NDowOS43ODFaIiwiYWdlIjoxOCwiaWF0IjoxNzA4MzI1MDQ5LCJleHAiOjE3MDg0MTE0NDl9.IKRZlaBTS9DeSGZT13DDvPSXe823UtfxkPRgkJ9QYxo",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"formName\": \"form 3 by musab\",\r\n    \"MCQ\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/form/CreateForm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"form",
+						"CreateForm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/form/GetByName",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hYXpAeHl6LmNvbSIsImNyZWF0ZWRBdCI6IjIwMjQtMDItMTlUMTE6NTE6NDMuMjI1WiIsImFnZSI6MTgsImFkbWluIjpmYWxzZSwiaWF0IjoxNzA4MzQzNTAzLCJleHAiOjE3MDg0Mjk5MDN9.51joPtzYz41d_IK-ZE5DKDqPgqroyBjnkFWMb5_O7WE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"formName\": \"form 3 by musab\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/form/GetByName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"form",
+						"GetByName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/form/GetByNameWithUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im11c2FiQHh5ei5jb20iLCJjcmVhdGVkQXQiOiIyMDI0LTAyLTE5VDExOjQ5OjU5LjY2OVoiLCJhZ2UiOjE4LCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNzA4MzQzMzk5LCJleHAiOjE3MDg0Mjk3OTl9.DDwzlH19qkI9HeWzT0tiXburDtb6kO21DiaCCN1Bu0c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"formName\": \"form 2 by musab\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/form/GetByNameWithUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"form",
+						"GetByNameWithUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/form/DeleteFormByName",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hYXpAeHl6LmNvbSIsImNyZWF0ZWRBdCI6IjIwMjQtMDItMTlUMTE6NTE6NDMuMjI1WiIsImFnZSI6MTgsImFkbWluIjpmYWxzZSwiaWF0IjoxNzA4MzQzNTAzLCJleHAiOjE3MDg0Mjk5MDN9.51joPtzYz41d_IK-ZE5DKDqPgqroyBjnkFWMb5_O7WE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"formName\": \"first form by abc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/form/DeleteFormByName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"form",
+						"DeleteFormByName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/form/DeleteUserByEmail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im11c2FiQHh5ei5jb20iLCJjcmVhdGVkQXQiOiIyMDI0LTAyLTE5VDEyOjAxOjU3LjU3MVoiLCJhZ2UiOjE4LCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNzA4MzQ0MTE3LCJleHAiOjE3MDg0MzA1MTd9.pIrzNnYybhawLHNT9jZJpMIplc7fmmiGFm91m-JqaP4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"del@xyz.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/form/DeleteUserByEmail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"form",
+						"DeleteUserByEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/form/UpdateUserAge",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im11c2FiQHh5ei5jb20iLCJjcmVhdGVkQXQiOiIyMDI0LTAyLTE5VDEyOjI5OjA2LjQ5MloiLCJhZ2UiOjE4LCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNzA4MzQ1NzQ2LCJleHAiOjE3MDg0MzIxNDZ9.BZC3fiJPVoX6RLg0Lm2SCUweJXp-5Dv_9Dc7RrW07ag",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"musab@xyz.com\",\r\n    \"firstName\": \"musab\",\r\n    \"lastName\": \"iqbal\",\r\n    \"admin\":true,\r\n    \"age\": 22,\r\n    \"password\": \"12345678!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/form/UpdateUserAge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"form",
+						"UpdateUserAge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/form/UpdateFormMCQ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im11c2FiQHh5ei5jb20iLCJjcmVhdGVkQXQiOiIyMDI0LTAyLTE5VDEyOjI5OjA2LjQ5MloiLCJhZ2UiOjE4LCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNzA4MzQ1NzQ2LCJleHAiOjE3MDg0MzIxNDZ9.BZC3fiJPVoX6RLg0Lm2SCUweJXp-5Dv_9Dc7RrW07ag",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"formName\": \"form 1 by abc\",\r\n    \"MCQ\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/form/UpdateFormMCQ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"form",
+						"UpdateFormMCQ"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
